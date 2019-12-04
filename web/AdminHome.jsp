@@ -1,0 +1,358 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Admin Home</title>
+        <style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>       
+        
+        <style>
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #660000;
+}
+</style>
+    </head>
+    <body background="m12.jpg">
+        <jsp:include page="AdminHeader.jspf"/>
+        <br>
+        <br>
+        <h3 align="center">Welcome:<%=session.getAttribute("name")%></h3>
+        <hr>
+        <h2 align="center">Admin Home</h2>
+        <%
+            try
+        {
+            if(session.getAttribute("name")==null)
+            {
+                response.sendRedirect("adminlogin.jsp");
+            }
+        }
+            catch(Exception ex)
+            {
+              out.println(ex);  
+            }
+        
+        %>
+         <div class="container">
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+   
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="main/23VJPAGE4PRE-SCHOOLS.jpg"  style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="main/1.jpg"  style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="main/anganwadi-kgpE--621x414@LiveMint.jpg"  style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>     
+
+<!-- Links (sit on top) -->
+
+
+<!-- Header with image -->
+
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT Anganwadi</span></h5>
+    <p>Anganwadi is a type of rural mother and child care centre in India. They were started by the Indian government in 1975 as part of the Integrated Child Development Services program to combat child hunger and malnutrition. Anganwadi means "courtyard shelter" in Indian languages.</p>
+    <p>A typical Anganwadi centre provides basic health care in Indian villages. It is a part of the Indian public health care system. Basic health care activities include contraceptive counseling and supply, nutrition education and supplementation, as well as pre-school activities.[1] The centres may be used as depots for oral rehydration salts, basic medicines and contraceptives.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+   
+    </div>
+      
+   <!-- <img src="image/Surypet.jpg" style="width:100%;max-width:1000px" class="w3-margin-top"> -->
+      
+      
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="image/24myhsn_anganaw+25BGMYSURUANGAN.jpg.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="image/_a062e37e-4837-11e7-9f7a-23d54b55bc46.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="image/Surypet.jpg" style="width:100%">
+  
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">4/ 5</div>
+  <img src="image/aangananbari_1938288_835x547-m.jpg" style="width:100%">
+ 
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">5/ 5</div>
+  <img src="image/Cyl5QgoUUAA-F12.jpg" style="width:100%">
+
+</div>    
+    
+    
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+   
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class=" s6 tablink">Eat</div>
+      </a>
+    
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Chapati / Puri</h5>
+      <p class="w3-text-grey"></p><br>
+    
+      <h5>Curry</h5>
+      <p class="w3-text-grey"></p><br>
+    
+      <h5>Kheer / Halwa</h5>
+      <p class="w3-text-grey"></p><br>
+        
+          
+      <h5>Greengram Whole</h5>
+      <p class="w3-text-grey"></p><br>
+    
+      <h5>Khichdi</h5>
+      <p class="w3-text-grey"></p><br>
+    
+      <h5></h5>
+      <p class="w3-text-grey"></p>
+    </div>
+
+   
+    <img src="main/children.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  
+
+
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+
+    <p><STRONG>Powered by CODESQUAD</STRONG></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+    </body>
+</html>
